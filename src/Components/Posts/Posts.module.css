@@ -1,0 +1,90 @@
+.continer{
+position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+.singleContiner{
+    position: relative;
+    display: inline;
+
+    width:200px;
+    height: auto;
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.details{
+    position: absolute;
+    background-color: grey;
+    width: 100%;
+    
+}
+.details h4{
+    margin: 0;
+    padding: 6px;
+    align-self: flex-start;
+    color: aliceblue;
+    background-color: black;
+
+}
+
+.arrowDown{
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform:  translate(-50%,0) rotate(45deg);
+    -webkit-transform:  translate(-50%,0) rotate(45deg);
+    transition: padding 0.5s;
+    transition: transform 0.5s;
+
+}
+.arrowUp{
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform:  translate(-50%,0) rotate(225deg);
+    -webkit-transform:  translate(-50%,0) rotate(225deg);
+    transition: padding 0.5s;
+    transition: transform 0.5s;
+
+}
+.arrowUp:hover{
+    border: solid red;
+    border-width: 0 5px 5px 0;
+    padding: 4px;
+}
+.arrowDown:hover{
+    border: solid red;
+    border-width: 0 5px 5px 0;
+    padding: 4px;
+}
+.postImage{
+    padding: 4px;
+    box-sizing:content-box;
+    border: 2px solid grey;
+}
+.postBodyColapsed{
+    margin: 0;
+
+    overflow: hidden;
+    height: 5px;
+    transition: all 0.5s;
+}
+.postBodyExpanded{
+    margin: 0;
+
+    overflow: hidden;
+    padding: 10px;
+    height: auto;
+    transition: all 0.3s;
+}
