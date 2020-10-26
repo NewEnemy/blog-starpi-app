@@ -20,7 +20,7 @@ export default class singlePost extends Component {
 
 
         <div className={styles.singleContiner} >
-            <Orderbox function={()=>{this.select(this)}}></Orderbox>
+            <Orderbox function={()=>{this.select(this)}} selected = {this.state.selected}></Orderbox>
             <i className={this.state.selected?"fas fa-check-circle "+styles.selectMarker:styles.hide}></i>
         <div className={styles.postImage}>
         <img src={this.props.postImage[0].formats.thumbnail.url}></img>

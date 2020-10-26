@@ -4,13 +4,14 @@ import { useQuery,gql } from '@apollo/client';
 import styles from './Posts.module.css'
 
 export default function Posts(){
+
     const postQuery = gql`
     query {
       artPosts{
-        Title
+        title
         body
         id
-       postImage{
+       imagePost{
          formats
        }
        
@@ -19,14 +20,14 @@ export default function Posts(){
     `
     const{loading,error,data} = useQuery(postQuery)
     if(loading)return <h1>Loading..</h1>
-    if(error) return <h1>Error :</h1>
+  if(error) return <h1>Error :{console.warn(error)}</h1>
 
 
-    return data.artPosts.map(({Title,body,id,postImage})=>{
+    return data.artPosts.map(({title,body,id,imagePost})=>{
        
         return(
             <div className={styles.continer}>
-            <SinglePost id={id} title={Title} body={body} postImage = {postImage}></SinglePost>
+          ///<SinglePost id={id} title={title} body={body} postImage = {imagePost}></SinglePost>
             </div>
         )
     }

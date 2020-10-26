@@ -5,8 +5,6 @@ display: block;
 .singleContiner{
     position: relative;
     float: left;
-    
-    
     height: auto;
     margin: 40px;
     padding: 0px;
@@ -38,9 +36,7 @@ display: block;
     align-self: center;
     position: absolute;
     top: 100%;
-
-    width: 100%;
-    
+    width: 100%;  
 }
 .details h4{
     margin: 0;
@@ -48,8 +44,6 @@ display: block;
     align-self: flex-start;
     color: aliceblue;
     background-color: black;
- 
-
 }
 .details p{
    
@@ -70,7 +64,6 @@ display: block;
     -webkit-transform:  translate(-50%,0) rotate(45deg);
     transition: padding 0.5s;
     transition: transform 0.5s;
-
 }
 .arrowUp{
     content: "";
@@ -85,8 +78,6 @@ display: block;
     -webkit-transform:  translate(-50%,0) rotate(225deg);
     transition: padding 0.5s;
     transition: transform 0.5s;
-    
-
 }
 .arrowUp:hover{
     border: solid red;
@@ -133,10 +124,6 @@ display: inline;
     bottom:15px;
     left: 0;
     z-index: 2;
-    
-
-   
-    
 }
 .thumbUp{
     position: relative;
@@ -188,11 +175,15 @@ display: inline;
 
 }
 .Orderbox{
+
     position: relative;
     width: 50%;
     padding: 5px;
     overflow: hidden;
     float: left;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
     transform: translateX(-90%);
     -webkit-transform: translateX(-90%) ;
     background-color: rgba(255, 255, 255, 0.5);
@@ -201,13 +192,18 @@ display: inline;
   
 }
 .Orderbox:hover{
+
     transform: translateX(0%);
-    -webkit-transform: translateX(0%) ;
+    -webkit-transform: translateX(0%);
+
 }
+
 .OrderboxArrow{
+
     position: absolute;
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
+
 }
