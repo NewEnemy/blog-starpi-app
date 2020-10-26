@@ -20,12 +20,19 @@ export default function Posts(){
     const{loading,error,data} = useQuery(postQuery)
     if(loading)return <h1>Loading..</h1>
     if(error) return <h1>Error :</h1>
-    console.warn(styles)
-    return data.artPosts.map(({Title,body,id,postImage})=>(
-        <div className={styles.continer}>
-    <SinglePost id={id} title={Title} body={body} postImage = {postImage}></SinglePost>
-    </div>
-    ))
+
+
+    return data.artPosts.map(({Title,body,id,postImage})=>{
+       
+        return(
+            <div className={styles.continer}>
+            <SinglePost id={id} title={Title} body={body} postImage = {postImage}></SinglePost>
+            </div>
+        )
+    }
+     
+
+    )
 
 }
 
