@@ -1,0 +1,14 @@
+.articlesContiner{
+    padding: 20px;
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+
+.articleContiner{
+    text-align: justify;
+
+}
+.title{
+    text-align: center;
+}

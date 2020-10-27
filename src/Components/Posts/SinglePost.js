@@ -38,7 +38,6 @@ export default class singlePost extends Component {
 
         </div>
         <div className={styles.votingContiner}>
-            {console.warn(this.props.vote)}
     <i className= {"far fa-thumbs-up "+styles.thumbUp}>{this.props.vote.likes}</i>
         <i className= {"far fa-thumbs-down " +styles.thumbDown}>{this.props.vote.dislikes}</i>
         </div>

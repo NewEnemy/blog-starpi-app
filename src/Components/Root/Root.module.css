@@ -18,9 +18,10 @@ padding-bottom: 10px;
 }
 .mainContiner{
     display: -webkit-inline-box;
-    position: absolute;
-
+    position: relative;
+    cursor: grab;
     width:40vw;
+    
   overflow: hidden;
     height: auto;
     padding: 2rem;
