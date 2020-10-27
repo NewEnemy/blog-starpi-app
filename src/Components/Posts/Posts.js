@@ -11,6 +11,8 @@ export default function Posts(){
         title
         body
         id
+        likes
+        dislikes
        imagePost{
          formats
        }
@@ -23,16 +25,19 @@ export default function Posts(){
   if(error) return <h1>Error :{console.warn(error)}</h1>
 
 
-    return data.artPosts.map(({title,body,id,imagePost})=>{
-       
-        return(
-            <div className={styles.continer}>
-          ///<SinglePost id={id} title={title} body={body} postImage = {imagePost}></SinglePost>
-            </div>
-        )
-    }
-     
+    return( 
+      <div className={styles.continer} id="postContiner" style={{left:0}}>
 
+    
+      {
+      data.artPosts.map(({title,body,id,likes,dislikes,imagePost})=>{
+        return(
+          <SinglePost id={id} title={title} body={body} postImage = {imagePost} vote={{likes,dislikes}}></SinglePost>
+           )
+      }
+    )
+}
+    </div>
     )
 
 }
