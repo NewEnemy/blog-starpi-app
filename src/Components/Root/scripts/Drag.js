@@ -30,10 +30,11 @@ var i = 1
 
   export function stopDrag (event) { 
       let deltaLeft = lastLeftValue+speedX
-      var maxLeft = document.querySelector("#mainContiner").scrollLeftMax*-1
+      console.warn( )
+      var maxLeft = document.querySelector("#mainContiner").scrollWidth - document.querySelector("#mainContiner").clientWidth
       if(deltaLeft>0){deltaLeft=0}
-      if(deltaLeft<maxLeft){
-          deltaLeft = maxLeft
+      if(deltaLeft<maxLeft*-1){
+          deltaLeft = maxLeft*-1
       }
     animation = anime({
         targets: "#postContiner",

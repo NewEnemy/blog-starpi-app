@@ -1,0 +1,11 @@
+.ball{
+    height: 25px;
+    width: 25px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+  
+}

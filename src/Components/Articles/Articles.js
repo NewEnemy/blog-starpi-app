@@ -15,7 +15,6 @@ query {
 export default function Articles (){
 
     const{loading,error,data} = useQuery(postQuery)
-    console.warn(data)
     
     if(loading){
         return <h1>Just wait a sec</h1>

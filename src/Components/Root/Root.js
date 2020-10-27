@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Posts from '../Posts/Posts.js'
 import Articles from '../Articles/Articles.js'
-import Header from './Components/Header.js'
+import Bouncyball from '../Bouncyball/BouncyBallComponent.js'
 
 import styles from './Root.module.css'
 
@@ -15,7 +15,7 @@ export default class Root extends Component {
   }
   render() {
     return (
-        <div className={styles.root}>
+        <div className={styles.root} id="#root">
           <div className={styles.Head}>
             <i>Some Logo</i>
             <nav>
@@ -28,9 +28,9 @@ export default class Root extends Component {
           <div id="mainContiner" className={styles.mainContiner} onMouseDown={drag} onMouseUp={stopDrag}>
           <Posts></Posts>
           </div>
-          
+
           <Articles></Articles>
-        
+        <Bouncyball></Bouncyball>
   
          
         </div>
