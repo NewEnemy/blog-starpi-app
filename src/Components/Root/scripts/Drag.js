@@ -17,6 +17,7 @@ var i = 1
   const draging = (e)=>{
  
     animation.pause()
+
     var element = document.querySelector("#postContiner")
     i = parseInt( element.style.left)
     i+=e.movementX;
@@ -39,8 +40,6 @@ var i = 1
         left:deltaLeft,
         easing: 'spring(1, 80, 10, 0)',
         autostart:false,})
-
-    console.warn(animation)
     animation.play()
 
     window.removeEventListener('mousemove',draging)
