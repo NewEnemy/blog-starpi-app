@@ -1,0 +1,9 @@
+.continer{
+    margin: 4px;
+}
+.continer i{
+    padding: 5px;
+}
+.continer i:hover{
+    color: lightgray;
+}

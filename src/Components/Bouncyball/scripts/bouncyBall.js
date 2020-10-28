@@ -19,7 +19,6 @@ const stopedScrolling = ()=>{
     var rootElement = document.querySelector("#root")
     var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
         document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-    console.warn(limit-window.innerHeight)
     procent= (window.scrollY*98)/(limit-window.innerHeight)
                 anime({
         targets: "#ball",
@@ -31,7 +30,6 @@ const stopedScrolling = ()=>{
   initialY =null
 }
 export const ballInit=()=>{
-    console.warn(document.body.style.top="-1000px")
     document.addEventListener('scroll',calback)
 
     console.error("IM ALIVE")

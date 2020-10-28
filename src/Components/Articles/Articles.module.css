@@ -9,8 +9,37 @@
 .articleContiner{
     position: relative;
     text-align: justify;
+    border:1px solid grey;
+    margin: 50px;
+    box-shadow: 0 0 10px black;
 
 }
 .title{
     text-align: center;
+}
+.filter:hover{
+    color: lightgray;
+  
+}
+.filterMainWraper{
+    display:flex;
+    align-items: baseline;
+}
+.filterOptions{
+
+    overflow: hidden;
+    width: auto;
+    padding-right: 30px;
+
+}
+
+.optionBar{
+    display: flex;
+   position: relative;
+    background-color: lightgray;
+    border-radius: 0 10px 10px 0;
+    left: -300px;
+}
+.optionBar p{
+    margin: 5px;
 }
