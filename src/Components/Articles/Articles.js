@@ -9,6 +9,7 @@ query {
   articles{
     title
     content
+    tldr
   }
 }`
 
@@ -29,7 +30,6 @@ return(
      <div className={styles.filterMainWraper}>
      <i className={"fas fa-filter "+styles.filter} onClick={ShowHide}></i>
      <nav id="filterOptions" className={styles.filterOptions} >
-     
       <div id="optionBar" className={styles.optionBar} data-show={false} >
       <p>Name</p>
       <p>Date</p>
@@ -41,8 +41,8 @@ return(
    
 
     {
-    data.articles.map(({title,content})=>{
-      return <Article title={title} content={content} ></Article>
+    data.articles.map(({title,content,tldr})=>{
+      return <Article title={title} content={content} tldr={tldr} ></Article>
         
      })
     }

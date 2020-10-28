@@ -11,7 +11,20 @@
     text-align: justify;
     border:1px solid grey;
     margin: 50px;
+    padding: 10px;
     box-shadow: 0 0 10px black;
+    overflow: hidden;
+    height: 20vh;
+
+}
+.articleContinerExpanded{
+    position: relative;
+    text-align: justify;
+    border:1px solid grey;
+    margin: 50px;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    height: auto;
 
 }
 .title{
@@ -42,4 +55,23 @@
 }
 .optionBar p{
     margin: 5px;
+}
+.wraperForDots{
+    position: relative;
+
+    
+}
+.dotsToExpand{
+  position: absolute;
+    top: 95%;
+    width: min-content;
+font-size: 2rem;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.dotsToExpand:hover{
+    color: lightgray;
 }
