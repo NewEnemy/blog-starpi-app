@@ -6,7 +6,7 @@ export function ShowHide(){
 const continer = document.querySelector("#filterOptions")
 const filterOptionsBar = document.querySelector("#optionBar")
 var expanded =   filterOptionsBar.dataset.show
-   if(expanded=='true'){
+   if(expanded==='true'){
     anime({
         targets:filterOptionsBar,
         left:-300,

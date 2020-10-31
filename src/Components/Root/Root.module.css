@@ -20,7 +20,8 @@ padding-bottom: 10px;
     display: -webkit-inline-box;
     position: relative;
     cursor: grab;
-    width:40vw;
+    width:min-content;
+    max-width: 80vw;
     
   overflow: hidden;
     height: auto;

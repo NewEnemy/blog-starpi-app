@@ -6,7 +6,12 @@ var lastLeftValue =0
 var animation = anime({
   })
 export  function drag (event,args) {
-
+  var element = document.querySelector("#postContiner")
+  if(element==null){
+     
+    return
+  }
+  
     window.addEventListener("mousemove",draging)
   }
 
@@ -19,12 +24,14 @@ var i = 1
     animation.pause()
 
     var element = document.querySelector("#postContiner")
+
+
     i = parseInt( element.style.left)
     i+=e.movementX;
     speedX = e.movementX;
     element.style.left = i+"px"
     lastLeftValue = parseInt( element.style.left)
-    if(e.buttons==0){stopDrag()}
+    if(e.buttons===0){stopDrag()}
 
   }
 
