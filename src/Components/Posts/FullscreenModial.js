@@ -10,10 +10,16 @@ export default class FullscreenModial extends Component {
 
      
       <div className={styles.FullscreenModial}>
-    
-        <div onClick={()=>{this.props.closeFunction("close")}}>X close</div>
-        <h1>{this.props.modialData.title}</h1>
-       <img src={this.props.modialData.image}></img>
+     
+      <div className={styles.closeButton} onClick={()=>{this.props.closeFunction("close")}}>
+        <i class="fas fa-times"></i>
+        </div>
+
+
+      <div className={styles.imageContiner}>
+      <img src={this.props.modialData.image}></img>
+      </div>
+   
         </div>
         </div>
     );

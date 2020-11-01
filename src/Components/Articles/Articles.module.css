@@ -3,6 +3,7 @@
     padding: 20px;
     max-width: 60vw;
     margin: 0 auto;
+    
 }
 
 
@@ -16,6 +17,8 @@
     overflow: hidden;
     height: 20vh;
 
+   
+
 }
 .articleContinerExpanded{
     position: relative;
@@ -26,6 +29,7 @@
     box-shadow: 0 0 10px black;
     height: auto;
 
+  
 }
 .title{
     text-align: center;
@@ -63,7 +67,7 @@
 }
 .dotsToExpand{
   position: absolute;
-    top: 95%;
+    top: 0;
     width: min-content;
 font-size: 2rem;
 
