@@ -7,6 +7,7 @@ import styles from './Articles.module.css'
 const postQuery = gql`
 query {
   articles{
+    id
     title
     content
     tldr
@@ -22,7 +23,7 @@ export default function Articles (){
     }
 
     if(error){
-        return <h4>ERROR</h4>
+        return <h4>ERROR </h4>
     }
 return(
     <div className={styles.articlesContiner}>
