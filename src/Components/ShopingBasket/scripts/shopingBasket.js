@@ -82,8 +82,6 @@ export const basketInit = () => {
     countItems: count,
     removeAllItems: removeAll,
     getIterator: iterator
-  
-  
   }
 
   
