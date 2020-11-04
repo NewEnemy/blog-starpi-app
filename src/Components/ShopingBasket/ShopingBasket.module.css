@@ -1,0 +1,27 @@
+.basketContiner{
+    position: absolute;
+   width: 30px;
+   height: auto;
+
+ right: 0;
+ margin-right: 100px;
+ margin-top: 10px;
+}
+.basketContiner i{
+    padding: 0px !important;
+    font-size: 2rem;
+}
+.circle{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+    padding: 0px !important;
+    background-color: salmon;
+    border-radius: 50%;
+    font-weight: bolder;
+    padding: 3px !important;
+    line-height: 20px;
+    color: black;
+}

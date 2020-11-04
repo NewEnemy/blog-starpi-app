@@ -62,7 +62,7 @@ return(<FulscreenModial modialData = {modialData} closeFunction={swithFullscreen
       {
       data.artPosts.map(({title,body,id,likes,dislikes,imagePost})=>{
         return(
-          <SinglePost fullscreenFunc={swithFullscreen} id={id} title={title} body={body} postImage = {imagePost} vote={{likes,dislikes}}></SinglePost>
+          <SinglePost fullscreenFunc={swithFullscreen} id={id} title={title} body={body} postImage = {imagePost} vote={{likes,dislikes}} price ={20}></SinglePost>
            )
       }
     )

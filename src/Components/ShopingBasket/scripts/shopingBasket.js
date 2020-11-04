@@ -1,4 +1,6 @@
-export const basketInit = () => {
+let updateFunc;
+export const basketInit = (func,item) => {
+    updateFunc = func 
     if (!sessionStorage.getItem("basket")) {
       const basket = {
   
@@ -18,6 +20,7 @@ export const basketInit = () => {
   const updateBasket = (basket) => {
     sessionStorage.removeItem("basket")
     sessionStorage.setItem("basket", JSON.stringify(basket))
+   updateFunc(controler.countItems())
   }
   
   const add = (key, value) => {
@@ -75,13 +78,19 @@ export const basketInit = () => {
     return generator()
   
   }
+
+  const getAsArray = ()=>{
+      var basket = getBasket()
+      return Object.entries(basket)
+  }
   
- export default controler = {
+const controler = {
     addItem: add,
     removeItem: remove,
     countItems: count,
     removeAllItems: removeAll,
-    getIterator: iterator
+    getIterator: iterator,
+    getArray: getAsArray
   }
 
-  
+  export default controler

@@ -3,6 +3,7 @@ import styles from './Posts.module.css'
 import { Component } from 'react';
 import Orderbox from './Orderbox.js'
 import FulscreenModial from './FullscreenModial.js'
+import basketControler from '../ShopingBasket/scripts/shopingBasket'
 
 
 
@@ -18,7 +19,22 @@ export default class singlePost extends Component {
         
     }
  select(that){
+        if(!that){
+            that = this
+        }
+
+    if(!that.state.selected){
+        basketControler.addItem(that.props.id,{
+            title:that.props.title,
+            img:this.props.postImage[0].formats.thumbnail.url,
+            price: this.props.price
+        })
+       
+    }else{
+        basketControler.removeItem(that.props.id)
+    }
     that.setState({selected:!that.state.selected})
+
  }
  fullscreen(event){
 
@@ -32,7 +48,7 @@ export default class singlePost extends Component {
             }
             if ((event.keyCode|| event.which) === 32 && event.shiftKey) {
                
-                this.setState({selected:!this.state.selected})
+                this.select()
             } 	
      }
      if(event.type =="focus"){
@@ -45,6 +61,16 @@ export default class singlePost extends Component {
  componentDidMount(){
     this.element.addEventListener('keyup',(e)=>{ this. accessibilityHandler(e)})
     this.element.addEventListener('focus',(e)=>{ this. accessibilityHandler(e)})
+
+    let it = basketControler.getIterator()
+    for (const item of it) {
+        if(item.key == this.props.id){
+            this.setState({selected:true})
+        }
+        
+    }
+
+
  }
  componentWillUnmount(){
     this.element.removeEventListener('keyup',(e)=>{ this. accessibilityHandler(e)})
